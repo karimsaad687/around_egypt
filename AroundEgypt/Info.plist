@@ -4,9 +4,10 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string>gotham_book.otf</string>
-		<string>gotham_bold.otf</string>
-		<string>gotham_medium.otf</string>
+		<string>gotham-book.otf</string>
+		<string>gotham-bold.otf</string>
+		<string>gotham-medium.otf</string>
+		<string>gotham-rounded-bold.otf</string>
 	</array>
 </dict>
 </plist>
