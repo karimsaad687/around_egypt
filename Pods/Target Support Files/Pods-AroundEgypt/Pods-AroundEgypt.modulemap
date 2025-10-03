@@ -1,0 +1,6 @@
+framework module Pods_AroundEgypt {
+  umbrella header "Pods-AroundEgypt-umbrella.h"
+
+  export *
+  module * { export * }
+}

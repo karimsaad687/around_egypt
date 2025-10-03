@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var search: String = ""
+    @StateObject private var recommendedPlacesViewModel = RecommendedPlacesViewModel()
+    @StateObject private var recentPlacesViewModel = MosetRecentPlacesViewModel()
     var body: some View {
         ScrollView(.vertical) {
             VStack(alignment: .leading) {
@@ -37,22 +39,29 @@ struct ContentView: View {
                 Text(LocalizedStringKey("recommended_experiences")).font(.custom("gotham-bold",size: 22)).padding(.top, 16)
                 ScrollView(.horizontal) {
                     LazyHStack(spacing: 10){
-                        ForEach(1...1000, id: \.self) { item in
-                            TableCell(width: UIScreen.main.bounds.width * 0.8)
+                        ForEach(recommendedPlacesViewModel.places, id: \.id) { place in
+                            TableCell(width: UIScreen.main.bounds.width * 0.8,place: place)
                             
                         }
                         
                     }.frame(maxWidth: .infinity).frame(height: 180)
+                        .onAppear(perform: {
+                        recommendedPlacesViewModel.getRecommendedPlaces()
+                    })
                 }
-                Text(LocalizedStringKey("recommended_experiences")).font(.custom("gotham-bold",size: 22)).padding(.top, 16)
+                Text(LocalizedStringKey("most_recent")).font(.custom("gotham-bold",size: 22)).padding(.top, 16)
                 
-                LazyVStack(spacing: 10){
-                    ForEach(1...10, id: \.self) { item in
-                        TableCell(width: UIScreen.main.bounds.width * 0.9)
+                LazyVStack(spacing: 22){
+                    ForEach(recentPlacesViewModel.places, id: \.id) { place in
+                        TableCell(width: UIScreen.main.bounds.width * 0.9,place: place)
                         
                     }.padding(.top, 12)
+                       
+                        
                     
-                }.frame(maxWidth: .infinity).padding(.bottom,16)
+                }.frame(maxWidth: .infinity).padding(.bottom,16) .onAppear(perform: {
+                    recentPlacesViewModel.getMostRecentPlaces()
+                })
                 
                 
             }

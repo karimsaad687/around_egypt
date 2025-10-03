@@ -8,16 +8,36 @@
 import SwiftUI
 struct TableCell:View{
     var width:CGFloat
+    var place:Place
     var body: some View {
         VStack{
             ZStack{
-                Image("test_image").resizable().frame(maxWidth: .infinity)
+                AsyncImage(url: URL(string: place.coverPhoto)) { phase in
+                            switch phase {
+                            case .empty:
+                                ProgressView().foregroundColor(Color.blue)
+                                    .frame(width: 100, height: 100)
+                            case .success(let image):
+                                image
+                                    .resizable()
+                                    
+                            case .failure:
+                                Image(systemName: "photo")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .foregroundColor(.gray)
+                            @unknown default:
+                                EmptyView()
+                            }
+                        }.frame(maxWidth: .infinity)
                 VStack{
                     HStack{
-                        HStack{
-                            Image(uiImage: .icRecommended).resizable().frame(width: 9, height: 9).padding(.leading,8)
-                            Text(LocalizedStringKey("recommended")).font(.custom("gotham-bold",size: 10)).padding(.trailing,8).foregroundColor(Color.white)
-                        }.frame(height:17).background(Color.black.opacity(0.5)).cornerRadius(20)
+                        if place.recommended == 1 {
+                            HStack{
+                                Image(uiImage: .icRecommended).resizable().frame(width: 9, height: 9).padding(.leading,8)
+                                Text(LocalizedStringKey("recommended")).font(.custom("gotham-bold",size: 10)).padding(.trailing,8).foregroundColor(Color.white)
+                            }.frame(height:17).background(Color.black.opacity(0.5)).cornerRadius(20).opacity((place.recommended == 1) ? 1 : 0)
+                        }
                         Spacer()
                         Button("", image: .icInfo, action: {})
                     }
@@ -30,7 +50,7 @@ struct TableCell:View{
                     HStack{
                         HStack{
                             Image(uiImage: .icEye).resizable().frame(width: 14, height: 10).padding(.leading,8)
-                            Text(LocalizedStringKey("150")).font(.custom("gotham-bold",size: 14)).padding(.trailing,8).foregroundColor(Color.white)
+                            Text("\(place.viewsNo)").font(.custom("gotham-bold",size: 14)).padding(.trailing,8).foregroundColor(Color.white)
                         }
                         Spacer()
                         Button("", image: .icMultiImages, action: {})
@@ -40,11 +60,11 @@ struct TableCell:View{
             }.frame(height: 154).cornerRadius(10)
             
             HStack{
-                Text(LocalizedStringKey("Nubian House")).font(.custom("gotham-bold",size: 10)).padding(.trailing,8).foregroundColor(Color.black)
+                Text(place.title).font(.custom("gotham-bold",size: 10)).padding(.trailing,8).foregroundColor(Color.black)
                 Spacer()
                 HStack{
-                    Text(LocalizedStringKey("372")).font(.custom("gotham-medium",size: 14)).foregroundColor(Color.black)
-                    Image(uiImage: .icLike).resizable().frame(width: 20, height: 18)
+                    Text("\(place.likesNo)").font(.custom("gotham-medium",size: 14)).foregroundColor(Color.black)
+                    Image(uiImage: (place.isLiked ?? false) ? .icLike : .icLikeOff).resizable().frame(width: 20, height: 18)
                 }
             
             }
@@ -53,5 +73,5 @@ struct TableCell:View{
 }
 
 #Preview {
-    TableCell(width:UIScreen.main.bounds.width * 0.9)
+    //TableCell(width:UIScreen.main.bounds.width * 0.9)
 }

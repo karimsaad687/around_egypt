@@ -4,10 +4,7 @@
     "" : {
 
     },
-    "150" : {
-
-    },
-    "372" : {
+    "%lld" : {
 
     },
     "description" : {
@@ -53,9 +50,6 @@
           }
         }
       }
-    },
-    "Nubian House" : {
-
     },
     "recommended" : {
       "extractionState" : "manual",

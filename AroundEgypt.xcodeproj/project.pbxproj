@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		86962C241B920A1A2305734D /* Pods_AroundEgypt_AroundEgyptUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E2F58FA62149F98BAE3ADDF /* Pods_AroundEgypt_AroundEgyptUITests.framework */; };
+		B51FE2A6FFE1795E69D9B7D4 /* Pods_AroundEgypt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1EA407B34C5F861DDF719FB /* Pods_AroundEgypt.framework */; };
+		FC7EBC70635EDD39FA693718 /* Pods_AroundEgyptTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 707B0276A7FFAF0B98BED95A /* Pods_AroundEgyptTests.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		8A3110DD2E8EA6870040EE50 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,9 +30,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E2F58FA62149F98BAE3ADDF /* Pods_AroundEgypt_AroundEgyptUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AroundEgypt_AroundEgyptUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		679BCF9D1DBA69F1B751E8C0 /* Pods-AroundEgypt-AroundEgyptUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AroundEgypt-AroundEgyptUITests.debug.xcconfig"; path = "Target Support Files/Pods-AroundEgypt-AroundEgyptUITests/Pods-AroundEgypt-AroundEgyptUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		707B0276A7FFAF0B98BED95A /* Pods_AroundEgyptTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AroundEgyptTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7785FB626DED4B49CD271D25 /* Pods-AroundEgypt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AroundEgypt.release.xcconfig"; path = "Target Support Files/Pods-AroundEgypt/Pods-AroundEgypt.release.xcconfig"; sourceTree = "<group>"; };
 		8A3110CC2E8EA6850040EE50 /* AroundEgypt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AroundEgypt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A3110DC2E8EA6870040EE50 /* AroundEgyptTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AroundEgyptTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A3110E62E8EA6870040EE50 /* AroundEgyptUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AroundEgyptUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E0F9227C3EE68F3B6C1F30B /* Pods-AroundEgypt-AroundEgyptUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AroundEgypt-AroundEgyptUITests.release.xcconfig"; path = "Target Support Files/Pods-AroundEgypt-AroundEgyptUITests/Pods-AroundEgypt-AroundEgyptUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A4E2B053A52A755835480123 /* Pods-AroundEgyptTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AroundEgyptTests.debug.xcconfig"; path = "Target Support Files/Pods-AroundEgyptTests/Pods-AroundEgyptTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C1EA407B34C5F861DDF719FB /* Pods_AroundEgypt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AroundEgypt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD1CB325A26F841FE07908F4 /* Pods-AroundEgyptTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AroundEgyptTests.release.xcconfig"; path = "Target Support Files/Pods-AroundEgyptTests/Pods-AroundEgyptTests.release.xcconfig"; sourceTree = "<group>"; };
+		D5695E391EB0F1BCE4B7B31A /* Pods-AroundEgypt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AroundEgypt.debug.xcconfig"; path = "Target Support Files/Pods-AroundEgypt/Pods-AroundEgypt.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -65,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B51FE2A6FFE1795E69D9B7D4 /* Pods_AroundEgypt.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC7EBC70635EDD39FA693718 /* Pods_AroundEgyptTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,12 +96,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86962C241B920A1A2305734D /* Pods_AroundEgypt_AroundEgyptUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		003BF5BC151552BDBA7DF2DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C1EA407B34C5F861DDF719FB /* Pods_AroundEgypt.framework */,
+				1E2F58FA62149F98BAE3ADDF /* Pods_AroundEgypt_AroundEgyptUITests.framework */,
+				707B0276A7FFAF0B98BED95A /* Pods_AroundEgyptTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8A3110C32E8EA6850040EE50 = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +120,8 @@
 				8A3110DF2E8EA6870040EE50 /* AroundEgyptTests */,
 				8A3110E92E8EA6870040EE50 /* AroundEgyptUITests */,
 				8A3110CD2E8EA6850040EE50 /* Products */,
+				8D35656F45A5F64736AE36B0 /* Pods */,
+				003BF5BC151552BDBA7DF2DD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +135,19 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		8D35656F45A5F64736AE36B0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D5695E391EB0F1BCE4B7B31A /* Pods-AroundEgypt.debug.xcconfig */,
+				7785FB626DED4B49CD271D25 /* Pods-AroundEgypt.release.xcconfig */,
+				679BCF9D1DBA69F1B751E8C0 /* Pods-AroundEgypt-AroundEgyptUITests.debug.xcconfig */,
+				8E0F9227C3EE68F3B6C1F30B /* Pods-AroundEgypt-AroundEgyptUITests.release.xcconfig */,
+				A4E2B053A52A755835480123 /* Pods-AroundEgyptTests.debug.xcconfig */,
+				CD1CB325A26F841FE07908F4 /* Pods-AroundEgyptTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -112,9 +155,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8A3110F02E8EA6870040EE50 /* Build configuration list for PBXNativeTarget "AroundEgypt" */;
 			buildPhases = (
+				B7610500485E6B0AA8B59E88 /* [CP] Check Pods Manifest.lock */,
 				8A3110C82E8EA6850040EE50 /* Sources */,
 				8A3110C92E8EA6850040EE50 /* Frameworks */,
 				8A3110CA2E8EA6850040EE50 /* Resources */,
+				2ABB632D912972C255CDC913 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -124,8 +169,6 @@
 				8A3110CE2E8EA6850040EE50 /* AroundEgypt */,
 			);
 			name = AroundEgypt;
-			packageProductDependencies = (
-			);
 			productName = AroundEgypt;
 			productReference = 8A3110CC2E8EA6850040EE50 /* AroundEgypt.app */;
 			productType = "com.apple.product-type.application";
@@ -134,6 +177,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8A3110F32E8EA6870040EE50 /* Build configuration list for PBXNativeTarget "AroundEgyptTests" */;
 			buildPhases = (
+				DC241BD014375A31D94A41FF /* [CP] Check Pods Manifest.lock */,
 				8A3110D82E8EA6870040EE50 /* Sources */,
 				8A3110D92E8EA6870040EE50 /* Frameworks */,
 				8A3110DA2E8EA6870040EE50 /* Resources */,
@@ -147,8 +191,6 @@
 				8A3110DF2E8EA6870040EE50 /* AroundEgyptTests */,
 			);
 			name = AroundEgyptTests;
-			packageProductDependencies = (
-			);
 			productName = AroundEgyptTests;
 			productReference = 8A3110DC2E8EA6870040EE50 /* AroundEgyptTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -157,9 +199,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8A3110F62E8EA6870040EE50 /* Build configuration list for PBXNativeTarget "AroundEgyptUITests" */;
 			buildPhases = (
+				64F3936DC2E7DB3EB6A580A4 /* [CP] Check Pods Manifest.lock */,
 				8A3110E22E8EA6870040EE50 /* Sources */,
 				8A3110E32E8EA6870040EE50 /* Frameworks */,
 				8A3110E42E8EA6870040EE50 /* Resources */,
+				6C93B3F8A10A61481F035198 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -170,8 +214,6 @@
 				8A3110E92E8EA6870040EE50 /* AroundEgyptUITests */,
 			);
 			name = AroundEgyptUITests;
-			packageProductDependencies = (
-			);
 			productName = AroundEgyptUITests;
 			productReference = 8A3110E62E8EA6870040EE50 /* AroundEgyptUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -243,6 +285,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2ABB632D912972C255CDC913 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AroundEgypt/Pods-AroundEgypt-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AroundEgypt/Pods-AroundEgypt-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AroundEgypt/Pods-AroundEgypt-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		64F3936DC2E7DB3EB6A580A4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AroundEgypt-AroundEgyptUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6C93B3F8A10A61481F035198 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AroundEgypt-AroundEgyptUITests/Pods-AroundEgypt-AroundEgyptUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AroundEgypt-AroundEgyptUITests/Pods-AroundEgypt-AroundEgyptUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AroundEgypt-AroundEgyptUITests/Pods-AroundEgypt-AroundEgyptUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B7610500485E6B0AA8B59E88 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AroundEgypt-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC241BD014375A31D94A41FF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AroundEgyptTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8A3110C82E8EA6850040EE50 /* Sources */ = {
@@ -319,7 +464,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -382,7 +527,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -403,6 +548,7 @@
 		};
 		8A3110F12E8EA6870040EE50 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5695E391EB0F1BCE4B7B31A /* Pods-AroundEgypt.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -433,6 +579,7 @@
 		};
 		8A3110F22E8EA6870040EE50 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7785FB626DED4B49CD271D25 /* Pods-AroundEgypt.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -463,6 +610,7 @@
 		};
 		8A3110F42E8EA6870040EE50 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4E2B053A52A755835480123 /* Pods-AroundEgyptTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -482,6 +630,7 @@
 		};
 		8A3110F52E8EA6870040EE50 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD1CB325A26F841FE07908F4 /* Pods-AroundEgyptTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -501,6 +650,7 @@
 		};
 		8A3110F72E8EA6870040EE50 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 679BCF9D1DBA69F1B751E8C0 /* Pods-AroundEgypt-AroundEgyptUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -518,6 +668,7 @@
 		};
 		8A3110F82E8EA6870040EE50 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E0F9227C3EE68F3B6C1F30B /* Pods-AroundEgypt-AroundEgyptUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;

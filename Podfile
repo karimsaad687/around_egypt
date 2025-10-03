@@ -6,6 +6,8 @@ target 'AroundEgypt' do
   use_frameworks!
 
   # Pods for AroundEgypt
+  pod 'Alamofire', '~> 5.0'
+
 
   target 'AroundEgyptTests' do
     inherit! :search_paths
