@@ -55,7 +55,7 @@ struct ContentView: View {
                                     TableCell(width: UIScreen.main.bounds.width * 0.8, place: place, optionsPressed: {option in
                                         if(option == "like"){
                                             likePlacesViewModel.likePressed(id: place.id, completion: {
-                                                SQLiteDatabase.shared.toggleLike(placeId: place.id,likeCount: likePlacesViewModel.likeCount)
+                                                SQLiteDatabase.shared.likePlace(placeId: place.id,likeCount: likePlacesViewModel.likeCount)
                                                 recommendedPlacesViewModel.getRecommendedPlaces()
                                                 
                                                 if !search.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
@@ -87,7 +87,7 @@ struct ContentView: View {
                             TableCell(width: UIScreen.main.bounds.width * 0.9, place: place,optionsPressed: {option in
                                 if(option == "like"){
                                     likePlacesViewModel.likePressed(id: place.id, completion: {
-                                        SQLiteDatabase.shared.toggleLike(placeId: place.id,likeCount: likePlacesViewModel.likeCount)
+                                        SQLiteDatabase.shared.likePlace(placeId: place.id,likeCount: likePlacesViewModel.likeCount)
                                         recommendedPlacesViewModel.getRecommendedPlaces()
                                         
                                         if !search.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
@@ -109,7 +109,11 @@ struct ContentView: View {
                 }
             }
             .padding()
-        }
+        }.refreshable(action: {
+            SQLiteDatabase.shared.deleteAllPlaces()
+            recentPlacesViewModel.getMostRecentPlaces()
+            recommendedPlacesViewModel.getRecommendedPlaces()
+        })
         // SINGLE sheet modifier at the top level
         .sheet(item: $selectedPlace) { place in
             Details(place: place, onLikesCountChanged: { likesCount in

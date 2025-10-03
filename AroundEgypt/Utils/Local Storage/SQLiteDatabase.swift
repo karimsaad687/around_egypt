@@ -203,8 +203,7 @@ extension SQLiteDatabase {
         let sql = """
         SELECT p.*, c.id as city_id, c.name as city_name, c.disable as city_disable, c.topPick as city_topPick
         FROM places p
-        JOIN cities c ON p.cityId = c.id
-        ORDER BY p.lastUpdated DESC;
+        JOIN cities c ON p.cityId = c.id;
         """
         
         var statement: OpaquePointer?
@@ -281,8 +280,7 @@ extension SQLiteDatabase {
         SELECT p.*, c.id as city_id, c.name as city_name, c.disable as city_disable, c.topPick as city_topPick
         FROM places p
         JOIN cities c ON p.cityId = c.id
-        WHERE LOWER(p.title) LIKE LOWER(?)
-        ORDER BY p.viewsNo DESC;
+        WHERE LOWER(p.title) LIKE LOWER(?);
         """
         
         var statement: OpaquePointer?
@@ -357,8 +355,8 @@ extension SQLiteDatabase {
     }
     
     // MARK: - Update Operations
-    func toggleLike(placeId: String, likeCount: Int) {
-        let sql = "UPDATE places SET isLiked = NOT isLiked, likesNo = ? WHERE id = ?;"
+    func likePlace(placeId: String, likeCount: Int) {
+        let sql = "UPDATE places SET isLiked = 1, likesNo = ? WHERE id = ?;"
         
         var statement: OpaquePointer?
         

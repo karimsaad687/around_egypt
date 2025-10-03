@@ -65,11 +65,11 @@ struct Details: View {
                 Text("\(place.title)").font(.custom("gotham-bold",size: 16)).padding(.trailing,8).foregroundColor(Color.black)
                 Spacer()
                 HStack{
-                    Image( .icShare).resizable().frame(width: 16.39, height: 16.39).padding(.trailing,4)
+                    Button("", image: .icShare, action: {}).frame(width: 16.39, height: 16.39).padding(.trailing,4)
                     
                     Button("", image: (place.isLiked ?? false) ? .icLike : .icLikeOff, action: {
                         likePlacesViewModel.likePressed(id: place.id, completion: {
-                            SQLiteDatabase.shared.toggleLike(placeId: place.id,likeCount: likePlacesViewModel.likeCount)
+                            SQLiteDatabase.shared.likePlace(placeId: place.id,likeCount: likePlacesViewModel.likeCount)
                             onLikesCountChanged(likePlacesViewModel.likeCount)
                         })
                     }).frame(width: 20, height: 18).padding(.trailing,4)
