@@ -11,11 +11,21 @@ class MosetRecentPlacesViewModel:ObservableObject{
     @Published var isLoading = false
     
     func getMostRecentPlaces(){
-        isLoading = true
-        NetworkManager.shared.get(url: Urls.shared.experiences, completion: {result in
-            self.places=result
-            print(self.places)
-        })
+        if(SQLiteDatabase.shared.fetchAllPlaces().isEmpty){
+            isLoading = true
+            NetworkManager.shared.get(url: Urls.shared.experiences, completion: {result in
+                self.places=result
+                SQLiteDatabase.shared.savePlaces(result)
+                print(self.places)
+            })
+        }else{
+            self.places = SQLiteDatabase.shared.fetchAllPlaces()
+            
+        }
+    }
+    
+    func getMostRecentPlaces(searchWord:String){
+        self.places = SQLiteDatabase.shared.searchPlacesByTitle(searchWord)
     }
     
     

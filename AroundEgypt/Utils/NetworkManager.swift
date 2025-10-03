@@ -40,5 +40,30 @@ class NetworkManager {
         
     }
     
+    func post(url:String, completion: @escaping (Int)  -> Void){
+        AF.request(url,method: .post).responseDecodable(of: LikeResponse.self) { response in
+            switch response.result {
+            case .success(let likeResponse):
+                // Successfully decoded ExperienceResponse object
+                print("Successfully received data")
+                
+                // Access the experiences array
+                let response = likeResponse.data
+                completion(response)
+            case .failure(let error):
+                // Handle error
+                print("Error: \(error.localizedDescription)")
+                
+                // You can also check the response code
+                if let statusCode = response.response?.statusCode {
+                    print("Status code: \(statusCode)")
+                }
+                completion(-1)
+            }
+        }
+            
+        
+    }
+    
     // Add your network methods here
 }

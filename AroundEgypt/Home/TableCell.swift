@@ -64,7 +64,10 @@ struct TableCell:View{
                 Spacer()
                 HStack{
                     Text("\(place.likesNo)").font(.custom("gotham-medium",size: 14)).foregroundColor(Color.black)
-                    Image(uiImage: (place.isLiked ?? false) ? .icLike : .icLikeOff).resizable().frame(width: 20, height: 18)
+                    Button("", image: (place.isLiked ?? false) ? .icLike : .icLikeOff, action: {
+                        
+                    })
+//                    Image(uiImage: ).resizable().frame(width: 20, height: 18)
                 }
             
             }
