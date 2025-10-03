@@ -358,14 +358,14 @@ extension SQLiteDatabase {
     
     // MARK: - Update Operations
     func toggleLike(placeId: String, likeCount: Int) {
-        let sql = "UPDATE places SET isLiked = NOT isLiked, lastUpdated = ?, likesNo = ? WHERE id = ?;"
+        let sql = "UPDATE places SET isLiked = NOT isLiked, likesNo = ? WHERE id = ?;"
         
         var statement: OpaquePointer?
         
         if sqlite3_prepare_v2(db, sql, -1, &statement, nil) == SQLITE_OK {
-            sqlite3_bind_double(statement, 1, Date().timeIntervalSince1970)  // Parameter 1: lastUpdated
-            sqlite3_bind_int(statement, 2, Int32(likeCount))                 // Parameter 2: likesNo
-            sqlite3_bind_text(statement, 3, (placeId as NSString).utf8String, -1, nil) // Parameter 3: id
+            //sqlite3_bind_double(statement, 1, Date().timeIntervalSince1970)  // Parameter 1: lastUpdated
+            sqlite3_bind_int(statement, 1, Int32(likeCount))                 // Parameter 2: likesNo
+            sqlite3_bind_text(statement, 2, (placeId as NSString).utf8String, -1, nil) // Parameter 3: id
             
             if sqlite3_step(statement) != SQLITE_DONE {
                 print("Error toggling like for place: \(placeId)")

@@ -11,7 +11,7 @@ struct ContentView: View {
     @State private var search: String = ""
     @StateObject private var recommendedPlacesViewModel = RecommendedPlacesViewModel()
     @StateObject private var recentPlacesViewModel = MosetRecentPlacesViewModel()
-    
+    @StateObject private var likePlacesViewModel = LikePlacesViewModel()
     @State private var selectedPlace: Place?
     
     var body: some View {
@@ -52,7 +52,20 @@ struct ContentView: View {
                                 Button(action: {
                                     selectedPlace = place
                                 }) {
-                                    TableCell(width: UIScreen.main.bounds.width * 0.8, place: place)
+                                    TableCell(width: UIScreen.main.bounds.width * 0.8, place: place, optionsPressed: {option in
+                                        if(option == "like"){
+                                            likePlacesViewModel.likePressed(id: place.id, completion: {
+                                                SQLiteDatabase.shared.toggleLike(placeId: place.id,likeCount: likePlacesViewModel.likeCount)
+                                                recommendedPlacesViewModel.getRecommendedPlaces()
+                                                
+                                                if !search.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+                                                    recentPlacesViewModel.getMostRecentPlaces(searchWord: search)
+                                                } else {
+                                                    recentPlacesViewModel.getMostRecentPlaces()
+                                                }
+                                            })
+                                        }
+                                    })
                                 }
                             }
                         }
@@ -71,7 +84,20 @@ struct ContentView: View {
                         Button(action: {
                             selectedPlace = place
                         }) {
-                            TableCell(width: UIScreen.main.bounds.width * 0.9, place: place)
+                            TableCell(width: UIScreen.main.bounds.width * 0.9, place: place,optionsPressed: {option in
+                                if(option == "like"){
+                                    likePlacesViewModel.likePressed(id: place.id, completion: {
+                                        SQLiteDatabase.shared.toggleLike(placeId: place.id,likeCount: likePlacesViewModel.likeCount)
+                                        recommendedPlacesViewModel.getRecommendedPlaces()
+                                        
+                                        if !search.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+                                            recentPlacesViewModel.getMostRecentPlaces(searchWord: search)
+                                        } else {
+                                            recentPlacesViewModel.getMostRecentPlaces()
+                                        }
+                                    })
+                                }
+                            })
                         }
                     }
                     .padding(.top, 12)

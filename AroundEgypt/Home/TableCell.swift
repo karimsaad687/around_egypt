@@ -9,6 +9,7 @@ import SwiftUI
 struct TableCell:View{
     var width:CGFloat
     var place:Place
+    let optionsPressed: (String) -> Void?
     var body: some View {
         VStack{
             ZStack{
@@ -53,7 +54,9 @@ struct TableCell:View{
                             Text("\(place.viewsNo)").font(.custom("gotham-bold",size: 14)).padding(.trailing,8).foregroundColor(Color.white)
                         }
                         Spacer()
-                        Button("", image: .icMultiImages, action: {})
+                        Button("", image: .icMultiImages, action: {
+                            optionsPressed("multiImages")
+                        })
                     }
                     
                 }.padding(.leading,8).padding(.trailing,4).padding(.vertical,8)
@@ -65,7 +68,7 @@ struct TableCell:View{
                 HStack{
                     Text("\(place.likesNo)").font(.custom("gotham-medium",size: 14)).foregroundColor(Color.black)
                     Button("", image: (place.isLiked ?? false) ? .icLike : .icLikeOff, action: {
-                        
+                        optionsPressed("like")
                     })
 //                    Image(uiImage: ).resizable().frame(width: 20, height: 18)
                 }
