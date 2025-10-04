@@ -1,22 +1,13 @@
 {
-  "originHash" : "96e0b2c5aa6295de957dc9d748d3b6d7a3925386507df9cee99ca8de309e3cf7",
+  "originHash" : "d84e3856bb7f70982a9430d07414ec741af47418ccacd0c9f550e7d2b8eedd2d",
   "pins" : [
     {
-      "identity" : "sqlite.swift",
+      "identity" : "swiftui-cached-async-image",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/stephencelis/SQLite.swift.git",
+      "location" : "https://github.com/lorenzofiamingo/swiftui-cached-async-image",
       "state" : {
-        "revision" : "392dd6058624d9f6c5b4c769d165ddd8c7293394",
-        "version" : "0.15.4"
-      }
-    },
-    {
-      "identity" : "swift-toolchain-sqlite",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/swiftlang/swift-toolchain-sqlite",
-      "state" : {
-        "revision" : "b626d3002773b1a1304166643e7f118f724b2132",
-        "version" : "1.0.4"
+        "revision" : "467a3d17479887943ab917a379e62bbaff60ac8a",
+        "version" : "2.1.1"
       }
     }
   ],

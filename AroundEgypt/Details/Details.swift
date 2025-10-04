@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import CachedAsyncImage
 
 struct Details: View {
     var place: Place!
@@ -15,7 +16,7 @@ struct Details: View {
     var body: some View {
         VStack{
             ZStack{
-                AsyncImage(url: URL(string: place.coverPhoto)) { phase in
+                CachedAsyncImage(url: URL(string: place.coverPhoto)) { phase in
                             switch phase {
                             case .empty:
                                 ProgressView().foregroundColor(Color.blue)
@@ -72,7 +73,7 @@ struct Details: View {
                             SQLiteDatabase.shared.likePlace(placeId: place.id,likeCount: likePlacesViewModel.likeCount)
                             onLikesCountChanged(likePlacesViewModel.likeCount)
                         })
-                    }).frame(width: 20, height: 18).padding(.trailing,4)
+                    }).frame(width: 20, height: 18)
                     
                     Text("\(likePlacesViewModel.likeCount)").font(.custom("gotham-medium",size: 14)).foregroundColor(Color.black).onAppear(perform:{
                         likePlacesViewModel.likeCount = place.likesNo

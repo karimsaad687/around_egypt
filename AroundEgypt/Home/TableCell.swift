@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CachedAsyncImage
 struct TableCell:View{
     var width:CGFloat
     var place:Place
@@ -13,7 +14,7 @@ struct TableCell:View{
     var body: some View {
         VStack{
             ZStack{
-                AsyncImage(url: URL(string: place.coverPhoto)) { phase in
+                CachedAsyncImage(url: URL(string: place.coverPhoto)) { phase in
                             switch phase {
                             case .empty:
                                 ProgressView().foregroundColor(Color.blue)
